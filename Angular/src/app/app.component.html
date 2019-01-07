@@ -1,0 +1,20 @@
+<div>
+  <div>
+    <h2>US Geological Survey</h2>
+  </div>
+  <table>
+    <tr>
+      <th class="city">City : California</th>
+      <th class="magnitude">Magnitude >= <input type="number" placeholder="0.0" [(ngModel)]=filterMagnitude></th>
+      <th class="date">Date</th>
+    </tr>
+    <tbody *ngFor="let usgsData of usgsFormattedDataArray">
+      <tr *ngIf="usgsData.mag >= filterMagnitude">
+        <td class="city">{{ usgsData.place}}</td>
+        <td class="magnitude">{{ usgsData.mag}}</td>
+        <td class="date">{{ usgsData.time | date }}</td>
+      </tr>
+    </tbody>
+    <div class="loader" *ngIf="isNotLoaded"></div>
+  </table>
+</div>

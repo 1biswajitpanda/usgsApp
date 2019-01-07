@@ -1,0 +1,73 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 30px;
+    background-color: #333;
+    color: #f2f2f2;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    font-size: 16px;
+    font-weight: 100;
+    box-shadow: -10px 10px 10px lightgray, 10px -10px 10px lightgray;
+    position: relative;
+    top: 100px;
+}
+
+.magnitude {
+    width : 170px;
+}
+.date {
+    width : 150px;
+}
+.city {
+    width: 400px;
+}
+
+th, td {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+}
+
+th {
+    text-align: left;
+    background-color: rgb(26, 112, 26);
+    color: white;
+    font-weight: 200;
+}
+
+tr:hover {
+    background-color: lightgray;
+}
+
+input {
+    width: 50px;
+    background-color: lightgray;
+}
+
+.loader {
+    height: 15px;
+    width: 5%;
+    border-radius: 5px;
+    background-color: crimson;
+    position: absolute;
+    animation: loader 1s linear 0s infinite alternate;
+}
+@keyframes loader {
+    0%   {left:0%}
+    100%  {left:95%}
+}
